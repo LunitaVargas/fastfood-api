@@ -1,0 +1,32 @@
+### Obtener todos los productos (READ)
+GET http://localhost:3000/api/productos
+
+### Obtener producto por ID
+GET http://localhost:3000/api/productos/1
+
+### Crear producto (CREATE)
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Hamburguesa REST",
+  "descripcion": "Hamburguesa con carne y queso",
+  "precio": 18000,
+  "categoria_id": 1,
+  "disponible": true
+}
+### Actualizar producto (UPDATE)
+PUT http://localhost:3000/api/productos/30
+Content-Type: application/json
+
+{
+  "nombre": "Hamburguesa REST Actualizada",
+  "descripcion": "Hamburguesa doble con queso",
+  "precio": 22000,
+  "categoria_id": 1,
+  "disponible": true
+}
+### Eliminar producto (DELETE)
+DELETE http://localhost:3000/api/productos/30
+### Verificar producto eliminado
+GET http://localhost:3000/api/productos/30
